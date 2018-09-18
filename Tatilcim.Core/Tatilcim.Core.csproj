@@ -48,11 +48,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201809181349099_FirstMig.cs" />
+    <Compile Include="Migrations\201809181349099_FirstMig.Designer.cs">
+      <DependentUpon>201809181349099_FirstMig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TatilcimContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tatilcim.Domain\Tatilcim.Domain.csproj">
+      <Project>{712692e8-07de-47c6-ba2d-20c6d7786650}</Project>
+      <Name>Tatilcim.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201809181349099_FirstMig.resx">
+      <DependentUpon>201809181349099_FirstMig.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,6 @@
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Domain\bin\Debug\Tatilcim.Domain.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Domain\bin\Debug\Tatilcim.Domain.pdb
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Domain\obj\Debug\Tatilcim.Domain.csprojAssemblyReference.cache
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Domain\obj\Debug\Tatilcim.Domain.csproj.CoreCompileInputs.cache
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Domain\obj\Debug\Tatilcim.Domain.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Domain\obj\Debug\Tatilcim.Domain.pdb

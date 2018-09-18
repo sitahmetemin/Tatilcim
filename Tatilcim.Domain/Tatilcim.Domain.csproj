@@ -41,6 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\BaseEntity.cs" />
+    <Compile Include="Abstract\IBaseEntity.cs" />
+    <Compile Include="Concrate\Authority.cs" />
+    <Compile Include="Concrate\Country.cs" />
+    <Compile Include="Concrate\District.cs" />
+    <Compile Include="Concrate\Otel.cs" />
+    <Compile Include="Concrate\Province.cs" />
+    <Compile Include="Concrate\Reservation.cs" />
+    <Compile Include="Concrate\Room.cs" />
+    <Compile Include="Concrate\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

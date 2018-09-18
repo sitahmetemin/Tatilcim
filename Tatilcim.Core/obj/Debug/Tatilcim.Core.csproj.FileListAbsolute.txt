@@ -1,0 +1,16 @@
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\bin\Debug\Tatilcim.Core.dll.config
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\bin\Debug\Tatilcim.Core.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\bin\Debug\Tatilcim.Core.pdb
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\bin\Debug\EntityFramework.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\bin\Debug\Tatilcim.Domain.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\bin\Debug\Tatilcim.Domain.pdb
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\bin\Debug\EntityFramework.xml
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.csprojAssemblyReference.cache
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.csproj.CoreCompileInputs.cache
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.csproj.CopyComplete
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.pdb
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.Migrations.FirstMig.resources
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.csproj.GenerateResource.cache
