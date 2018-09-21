@@ -10,21 +10,14 @@ namespace Tatilcim.UI.Controllers
     {
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+            if (TempData["Status"] != null)
+            {
+                ViewBag.Status = "succes";
+                return View();
+            }
 
             return View();
+
         }
     }
 }

@@ -99,3 +99,10 @@ C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Admin\obj\Debug\Tatilcim.Admin.csp
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Admin\obj\Debug\Tatilcim.Admin.csproj.CopyComplete
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Admin\obj\Debug\Tatilcim.Admin.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Admin\obj\Debug\Tatilcim.Admin.pdb
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Admin\bin\Tatilcim.Common.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Admin\bin\Tatilcim.Core.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Admin\bin\Tatilcim.Domain.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Admin\bin\Tatilcim.Common.pdb
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Admin\bin\Tatilcim.Core.pdb
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Admin\bin\Tatilcim.Core.dll.config
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Admin\bin\Tatilcim.Domain.pdb

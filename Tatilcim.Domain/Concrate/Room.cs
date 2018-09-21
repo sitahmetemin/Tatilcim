@@ -12,6 +12,7 @@ namespace Tatilcim.Domain.Concrate
         public Room()
         {
             this.Reservations = new HashSet<Reservation>();
+            this.Albums = new HashSet<Album>();
         }
         public string Name { get; set; }
         public decimal Price { get; set; }
@@ -29,5 +30,6 @@ namespace Tatilcim.Domain.Concrate
         public virtual Otel Otel { get; set; }
 
         public ICollection<Reservation> Reservations { get; set; }
+        public ICollection<Album> Albums { get; set; }
     }
 }

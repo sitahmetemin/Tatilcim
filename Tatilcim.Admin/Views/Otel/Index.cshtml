@@ -1,4 +1,4 @@
-﻿
+﻿@model Tatilcim.Admin.Models.ViewVeriModel
 @{
     ViewBag.Title = "Otel";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -30,6 +30,7 @@
                                 <th>Ad</th>
                                 <th>Email</th>
                                 <th>Adres</th>
+                                <th>Statü</th>
                                 <th>İşlemler</th>
                             </tr>
                         </thead>
@@ -39,30 +40,42 @@
                                 <th>Ad</th>
                                 <th>Email</th>
                                 <th>Adres</th>
+                                <th>Statü</th>
                                 <th>İşlemler</th>
                             </tr>
                         </tfoot>
                         <tbody>
+                        @foreach (var veri in Model.Otel)
+                        {
                             <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
                                 <td>
-                                    <a href="#"class="btn btn-info btn-circle waves-effect"><i style="padding-top: 4px" class="fas fa-edit"></i></a>
-                                    <a href="#"class="btn btn-danger btn-circle waves-effect"><i style="padding-top: 4px" class="fas fa-trash"></i></a>
+                                    @veri.Id
+                                </td>
+                                <td>
+                                    @veri.Name
+                                </td>
+                                <td>
+                                    @veri.Email
+                                </td>
+                                <td>
+                                    @veri.Address
+                                </td>
+                                <td>
+                                    @if (veri.Status)
+                                    {
+                                        <label class="label label-success">Aktif</label>
+                                    }
+                                    else
+                                    {
+                                        <label class="label label-danger">Pasif</label>
+                                    }
+                                </td>
+                                <td>
+                                    <a href="/Otel/Update/@veri.Id" class="btn btn-info btn-circle waves-effect"><i style="padding-top: 4px" class="fas fa-edit"></i></a>
+                                    <a href="/Otel/Delete/@veri.Id" class="btn btn-danger btn-circle waves-effect"><i style="padding-top: 4px" class="fas fa-trash"></i></a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>Garrett Winters</td>
-                                <td>Accountant</td>
-                                <td>Tokyo</td>
-                                <td>63</td>
-                                <td>
-                                    <a href="#" class="btn btn-info btn-circle waves-effect"><i style="padding-top: 4px" class="fas fa-edit"></i></a>
-                                    <a href="#" class="btn btn-danger btn-circle waves-effect"><i style="padding-top: 4px" class="fas fa-trash"></i></a>
-                                </td>
-                            </tr>
+                        }
                         </tbody>
                     </table>
                 </div>

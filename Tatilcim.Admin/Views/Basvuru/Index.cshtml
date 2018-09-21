@@ -1,8 +1,9 @@
-﻿
+﻿@model Tatilcim.Admin.Models.ViewVeriModel
 @{
     ViewBag.Title = "Başvuru";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 
 <!-- Basic Examples -->
 <div class="row clearfix">
@@ -10,15 +11,8 @@
         <div class="card">
             <div class="header">
                 <h2>
-                    Liste @ViewBag.Title
+                    Otel Başvuruları
                 </h2>
-                <ul class="header-dropdown m-r--5">
-                    <li class="dropdown">
-                        <a href="" class="btn btn-success waves-effect">
-                            <i style="color: white;" class="fa fa-plus"></i> &nbsp; Yeni
-                        </a>
-                    </li>
-                </ul>
             </div>
             <div class="body">
                 <div class="table-responsive">
@@ -29,6 +23,7 @@
                                 <th>Ad</th>
                                 <th>Email</th>
                                 <th>Adres</th>
+                                <th>Statü</th>
                                 <th>İşlemler</th>
                             </tr>
                         </thead>
@@ -38,30 +33,43 @@
                                 <th>Ad</th>
                                 <th>Email</th>
                                 <th>Adres</th>
+                                <th>Statü</th>
                                 <th>İşlemler</th>
                             </tr>
                         </tfoot>
                         <tbody>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>
-                                    <a href="#" class="btn btn-info btn-circle waves-effect"><i style="padding-top: 4px" class="fas fa-edit"></i></a>
-                                    <a href="#" class="btn btn-danger btn-circle waves-effect"><i style="padding-top: 4px" class="fas fa-trash"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Garrett Winters</td>
-                                <td>Accountant</td>
-                                <td>Tokyo</td>
-                                <td>63</td>
-                                <td>
-                                    <a href="#" class="btn btn-info btn-circle waves-effect"><i style="padding-top: 4px" class="fas fa-edit"></i></a>
-                                    <a href="#" class="btn btn-danger btn-circle waves-effect"><i style="padding-top: 4px" class="fas fa-trash"></i></a>
-                                </td>
-                            </tr>
+                            @foreach (var veri in Model.Otel)
+                            {
+                                <tr>
+                                    <td>
+                                        @veri.Id
+                                    </td>
+                                    <td>
+                                        @veri.Name
+                                    </td>
+                                    <td>
+                                        @veri.Email
+                                    </td>
+                                    <td>
+                                        @veri.Address
+                                    </td>
+                                    <td>
+                                        @if (veri.Status)
+                                        {
+                                            <label class="label label-success">Aktif</label>
+                                        }
+                                        else
+                                        {
+                                            <label class="label label-danger">Pasif</label>
+                                        }
+                                    </td>
+                                    <td>
+                                        <button id="getDetailJS" data-id="@veri.Id" class="btn btn-warning btn-circle waves-effect">
+                                            <i style="padding-top: 4px" class="fas fa-info-circle"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
                         </tbody>
                     </table>
                 </div>
@@ -70,3 +78,86 @@
     </div>
 </div>
 <!-- #END# Basic Examples -->
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Oda Detayları</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="icerik" class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                <button type="button" id="GonderKaydet" class="btn btn-primary"><i class="fa fa-check"></i>Aktifleştir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        
+        $("#getDetailJS").on("click", function () {
+            $('#icerik').empty();
+            var Id = $(this).attr("data-id");
+            $.ajax(
+                {
+                    url: "/Basvuru/GetDetail?Id="+Id,
+                    type: "GET",
+                    success: function (result) {
+                        $('#icerik').append('<ul>' +
+                            '<li><b>Adı:</b>' + result.Name +'</li>' +
+                            '<li><b>Email:</b>' + result.Email +'</li>' +
+                            '<li><b>Adres:</b>' + result.Address +'</li>' +
+                            '<li><b>Description:</b>' + result.Description +'</li>' +
+                            '<li><b>Tel:</b>' + result.Tel +'</li>' +
+                            '<li><b>Yıldız:</b>' + result.Star +'</li>' +
+                            '<li><b>Otopark:</b>' + result.CarPark +'</li>' +
+                            '<li><b>restoran:</b>' + result.Restaurant +'</li>' +
+                            '<li><b>Bar:</b>' + result.Bar +'</li>' +
+                            '<li><b>Spa:</b>' + result.Spa +'</li>' +
+                            '<li><b>Havuz:</b>' + result.Pool +'</li>' +
+                            '<li><b>Spor Salonu:</b>' + result.Gym +'</li>' +
+                            '<li><b>Oda Servisi:</b>' + result.RoomService +'</li>' +
+                            '<li><b>Kahvaltı:</b>' + result.Breakfast +'</li>' +
+                            '<li><b>Wifi:</b>' + result.Wifi +'</li>' +
+                            '<li>Id =<input type="text" readonly id="aktifID" value="' + result.Id + '" /></li>' +
+                            '</ul>');
+                        $('#exampleModalCenter').modal('show');
+                    },
+                    error: function(parameters) {
+                        alert("hata");
+                    }
+                }
+            );
+        });
+
+        $("#GonderKaydet").on("click", function () {
+            var IdBilgisi = $('#aktifID').val();
+            $.ajax(
+                {
+                    url: "/Basvuru/Activated?Id=" + IdBilgisi,
+                    type: "GET",
+                    success: function (result) {
+                        alert(result);
+                        swal(
+                            'Good job!',
+                            'You clicked the button!',
+                            result
+                        )
+                    },
+                    error: function (response) {
+                        alert(response);
+                    }
+                }
+            );
+        });
+
+
+    });
+</script>

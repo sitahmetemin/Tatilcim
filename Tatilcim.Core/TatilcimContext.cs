@@ -8,11 +8,10 @@ using Tatilcim.Domain.Concrate;
 
 namespace Tatilcim.Core
 {
-    class TatilcimContext : DbContext
+    public class TatilcimContext : DbContext
     {
         public TatilcimContext() : base("TatilcimContextString")
         {
-            
         }
 
         public DbSet<Authority> Authorities { get; set; }

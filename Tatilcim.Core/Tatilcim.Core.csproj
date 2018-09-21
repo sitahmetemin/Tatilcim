@@ -37,9 +37,44 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="ServiceStack, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.5.4.0\lib\net45\ServiceStack.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Client, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Client.5.4.0\lib\net45\ServiceStack.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Common.5.4.0\lib\net45\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Interfaces.5.4.0\lib\net45\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Mvc.5.4.0\lib\net45\ServiceStack.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=5.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Text.5.4.0\lib\net45\ServiceStack.Text.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,12 +83,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201809181349099_FirstMig.cs" />
-    <Compile Include="Migrations\201809181349099_FirstMig.Designer.cs">
-      <DependentUpon>201809181349099_FirstMig.cs</DependentUpon>
+    <Compile Include="Migrations\201809190830275_firstMig.cs" />
+    <Compile Include="Migrations\201809190830275_firstMig.Designer.cs">
+      <DependentUpon>201809190830275_firstMig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809190926087_otelEdit.cs" />
+    <Compile Include="Migrations\201809190926087_otelEdit.Designer.cs">
+      <DependentUpon>201809190926087_otelEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809191100417_otelEdit1.cs" />
+    <Compile Include="Migrations\201809191100417_otelEdit1.Designer.cs">
+      <DependentUpon>201809191100417_otelEdit1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809191228515_otelEdit2.cs" />
+    <Compile Include="Migrations\201809191228515_otelEdit2.Designer.cs">
+      <DependentUpon>201809191228515_otelEdit2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809201122229_UserOtelDuzenlemesi.cs" />
+    <Compile Include="Migrations\201809201122229_UserOtelDuzenlemesi.Designer.cs">
+      <DependentUpon>201809201122229_UserOtelDuzenlemesi.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AbstractBaseRepository.cs" />
+    <Compile Include="Services\Abstract\IBaseServices.cs" />
+    <Compile Include="Services\Abstract\IOtelService.cs" />
+    <Compile Include="Services\Abstract\IUserService.cs" />
+    <Compile Include="Services\Concrate\OtelService.cs" />
+    <Compile Include="Services\Concrate\UserService.cs" />
+    <Compile Include="Services\Services.cs" />
     <Compile Include="TatilcimContext.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,14 +119,30 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Tatilcim.Common\Tatilcim.Common.csproj">
+      <Project>{e097b490-8c33-4dc5-952a-70687bc3df28}</Project>
+      <Name>Tatilcim.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tatilcim.Domain\Tatilcim.Domain.csproj">
       <Project>{712692e8-07de-47c6-ba2d-20c6d7786650}</Project>
       <Name>Tatilcim.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201809181349099_FirstMig.resx">
-      <DependentUpon>201809181349099_FirstMig.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809190830275_firstMig.resx">
+      <DependentUpon>201809190830275_firstMig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809190926087_otelEdit.resx">
+      <DependentUpon>201809190926087_otelEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809191100417_otelEdit1.resx">
+      <DependentUpon>201809191100417_otelEdit1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809191228515_otelEdit2.resx">
+      <DependentUpon>201809191228515_otelEdit2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809201122229_UserOtelDuzenlemesi.resx">
+      <DependentUpon>201809201122229_UserOtelDuzenlemesi.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

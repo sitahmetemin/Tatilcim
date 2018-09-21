@@ -14,9 +14,13 @@ namespace Tatilcim.Domain.Concrate
         public string Email { get; set; }
         public string Password { get; set; }
         public string Image { get; set; }
+        public string Description { get; set; }
 
 
         public Nullable<int> AuthorityId { get; set; }
         public virtual Authority Authority { get; set; }
+
+        public Nullable<int> OtelId { get; set; }
+        public virtual Otel Otel { get; set; }
     }
 }

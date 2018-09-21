@@ -1,4 +1,5 @@
-﻿
+﻿@model Tatilcim.Admin.Models.ViewVeriModel
+
 @{
     ViewBag.Title = "Uyeler";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -15,7 +16,7 @@
                 </h2>
                 <ul class="header-dropdown m-r--5">
                     <li class="dropdown">
-                        <a href="" class="btn btn-success waves-effect">
+                        <a href="/Uye/Add" class="btn btn-success waves-effect">
                             <i style="color: white;" class="fa fa-plus"></i> &nbsp; Yeni
                         </a>
                     </li>
@@ -27,9 +28,10 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Ad</th>
+                                <th>Ad - Kullanıcı Adı</th>
                                 <th>Email</th>
-                                <th>Adres</th>
+                                <th>Otel</th>
+                                <th>Yetki</th>
                                 <th>İşlemler</th>
                             </tr>
                         </thead>
@@ -38,31 +40,43 @@
                                 <th>#</th>
                                 <th>Ad</th>
                                 <th>Email</th>
-                                <th>Adres</th>
+                                <th>Otel</th>
+                                <th>Yetki</th>
                                 <th>İşlemler</th>
                             </tr>
                         </tfoot>
                         <tbody>
+                            @foreach (var veri in Model.User)
+                            {
                             <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
+                                <td>
+                                    @veri.Id
+                                </td>
+                                <td>
+                                    @veri.Name - @veri.DisplayName
+                                </td>
+                                <td>
+                                    @veri.Email
+                                </td>
+                                <td>
+                                    @(veri.Otel != null  ? veri.Otel.Name : " -- "  )
+                                </td>
+                                <td>
+                                    @if (veri.AuthorityId == 2)
+                                    {
+                                        <label class="label label-warning">Otel Sahibi</label>
+                                    }
+                                    else
+                                    {
+                                        <label class="label label-info">Müşteri</label>
+                                    }
+                                </td>
                                 <td>
                                     <a href="#" class="btn btn-info btn-circle waves-effect"><i style="padding-top: 4px" class="fas fa-edit"></i></a>
                                     <a href="#" class="btn btn-danger btn-circle waves-effect"><i style="padding-top: 4px" class="fas fa-trash"></i></a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>Garrett Winters</td>
-                                <td>Accountant</td>
-                                <td>Tokyo</td>
-                                <td>63</td>
-                                <td>
-                                    <a href="#" class="btn btn-info btn-circle waves-effect"><i style="padding-top: 4px" class="fas fa-edit"></i></a>
-                                    <a href="#" class="btn btn-danger btn-circle waves-effect"><i style="padding-top: 4px" class="fas fa-trash"></i></a>
-                                </td>
-                            </tr>
+                            }
                         </tbody>
                     </table>
                 </div>

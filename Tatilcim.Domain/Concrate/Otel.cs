@@ -13,6 +13,7 @@ namespace Tatilcim.Domain.Concrate
         {
             this.Rooms = new HashSet<Room>();
             this.Reservations = new HashSet<Reservation>();
+            this.Albums = new HashSet<Album>();
         }
 
         public string Name { get; set; }
@@ -20,19 +21,23 @@ namespace Tatilcim.Domain.Concrate
         public string Email { get; set; }
         public string Description { get; set; }
         public string Tel { get; set; }
-        public string Yıldız { get; set; }
-        public bool CarPark { get; set; }
-        public bool Restaurant { get; set; }
-        public bool Bar { get; set; }
-        public bool Spa { get; set; }
-        public bool Pool { get; set; }
-        public bool Gym { get; set; }
-        public bool RoomService { get; set; }
-        public bool Breakfast { get; set; }
-        public bool Wifi { get; set; }
+        public int Star { get; set; }
+        public string Cover { get; set; }
+        public bool Status { get; set; }
+        public string CarPark { get; set; }
+        public string Restaurant { get; set; }
+        public string Bar { get; set; }
+        public string Spa { get; set; }
+        public string Pool { get; set; }
+        public string Gym { get; set; }
+        public string RoomService { get; set; }
+        public string Breakfast { get; set; }
+        public string Wifi { get; set; }
+
 
         public ICollection<Room> Rooms { get; set; }
-
         public ICollection<Reservation> Reservations { get; set; }
+        public ICollection<Album> Albums { get; set; }
+        public ICollection<User> Users { get; set; }
     }
 }

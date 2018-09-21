@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Abstract\BaseEntity.cs" />
     <Compile Include="Abstract\IBaseEntity.cs" />
+    <Compile Include="Concrate\Album.cs" />
     <Compile Include="Concrate\Authority.cs" />
     <Compile Include="Concrate\Country.cs" />
     <Compile Include="Concrate\District.cs" />

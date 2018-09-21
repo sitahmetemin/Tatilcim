@@ -60,22 +60,30 @@
     <link href="~/Content/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!-- Waves Effect Css -->
-    <link href="~/Content/plugins/node-waves/waves.css" rel="stylesheet"/>
+    <link href="~/Content/plugins/node-waves/waves.css" rel="stylesheet" />
 
     <!-- Animation Css -->
-    <link href="~/Content/plugins/animate-css/animate.css" rel="stylesheet"/>
+    <link href="~/Content/plugins/animate-css/animate.css" rel="stylesheet" />
 
     <!-- Morris Chart Css-->
-    <link href="~/Content/plugins/morrisjs/morris.css" rel="stylesheet"/>
+    <link href="~/Content/plugins/morrisjs/morris.css" rel="stylesheet" />
 
     <!-- Custom Css -->
     <link href="~/Content/css/style.css" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
-    <link href="~/Content/css/themes/all-themes.css" rel="stylesheet"/>
+    <link href="~/Content/css/themes/all-themes.css" rel="stylesheet" />
 
     <!-- JQuery DataTable Css -->
     <link href="~/Content/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- Bootstrap Select Css -->
+    <link href="~/Content/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+
+    <!-- Jquery Core Js -->
+    <script src="~/Content/plugins/jquery/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7/dist/sweetalert2.all.min.js"></script>
 </head>
 
 <body class="theme-red">
@@ -333,8 +341,8 @@
                 <img src="~/Content/images/user.png" width="48" height="48" alt="User"/>
             </div>
             <div class="info-container">
-                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
-                <div class="email">john.doe@example.com</div>
+                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@Session["Name"]</div>
+                <div class="email">sitahmetemin@gmail.com</div>
                 <div class="btn-group user-helper-dropdown">
                     <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                     <ul class="dropdown-menu pull-right">
@@ -382,8 +390,7 @@
 
 </section>
 
-<!-- Jquery Core Js -->
-<script src="~/Content/plugins/jquery/jquery.min.js"></script>
+
 
 
 <!-- Bootstrap Core Js -->
@@ -429,6 +436,9 @@
 
 <!-- Demo Js -->
 <script src="~/Content/js/demo.js"></script>
+
+<!-- Select Plugin Js -->
+<script src="~/Content/plugins/bootstrap-select/js/bootstrap-select.js"></script>
 
 
 </body>
