@@ -15,16 +15,17 @@ namespace Tatilcim.Domain.Concrate
             this.Albums = new HashSet<Album>();
         }
         public string Name { get; set; }
+        public string Cover { get; set; }
         public decimal Price { get; set; }
         public int PersonCount { get; set; }
-        public bool Tel { get; set; }
-        public bool TV { get; set; }
-        public bool Clima { get; set; }
-        public bool MiniBar { get; set; }
-        public bool Jakuzi { get; set; }
-        public bool Balcony { get; set; }
-        public bool Bathroom { get; set; }
-        public bool Dryer { get; set; }
+        public string Tel { get; set; }
+        public string TV { get; set; }
+        public string Clima { get; set; }
+        public string MiniBar { get; set; }
+        public string Jakuzi { get; set; }
+        public string Balcony { get; set; }
+        public string Bathroom { get; set; }
+        public string Dryer { get; set; }
 
         public Nullable<int> OtelId { get; set; }
         public virtual Otel Otel { get; set; }

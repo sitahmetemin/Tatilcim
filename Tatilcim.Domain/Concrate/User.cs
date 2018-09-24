@@ -22,5 +22,7 @@ namespace Tatilcim.Domain.Concrate
 
         public Nullable<int> OtelId { get; set; }
         public virtual Otel Otel { get; set; }
+
+        public virtual ICollection<Reservation> Reservations { get; set; }
     }
 }

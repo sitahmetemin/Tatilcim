@@ -4,6 +4,7 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ServiceStack.Redis;
 using Tatilcim.Admin.Models;
 using Tatilcim.Core;
 
@@ -44,7 +45,17 @@ namespace Tatilcim.Admin.Controllers
                 otel.Status = true;
                 if (_con.SaveChanges() > 0)
                 {
+                    using (var redisManager = new PooledRedisClientManager())
+                    using (var redis = redisManager.GetClient())
+                    {
+
+                        redis.Add("yeni_otel_"+Id, otel);
+
+                    }
                     return Json("success", JsonRequestBehavior.AllowGet);
+
+                   
+
                 }
                 return Json("error", JsonRequestBehavior.AllowGet);
             }

@@ -13,6 +13,9 @@ namespace Tatilcim.Domain.Concrate
         public DateTime EntryDate { get; set; }
         public DateTime ReleaseDate { get; set; }
 
+        public Nullable<int> UserId { get; set; }
+        public virtual User User { get; set; }
+
         public Nullable<int> OtelId { get; set; }
         public virtual Otel Otel { get; set; }
 

@@ -1,45 +1,4 @@
-﻿@*<!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>@ViewBag.Title - My ASP.NET Application</title>
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
-    </head>
-    <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="container body-content">
-            @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-            </footer>
-        </div>
-
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
-    </body>
-    </html>*@
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 
 <head>
@@ -60,16 +19,16 @@
 
     <!-- COMMON CSS -->
     @*<link href="~/Content/css/bootstrap.min.css" rel="stylesheet">*@
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet"/>
     <link href="~/Content/css/style.css" rel="stylesheet">
     <link href="~/Content/css/vendors.css" rel="stylesheet">
 
     <!-- CUSTOM CSS -->
     <link href="~/Content/css/custom.css" rel="stylesheet">
-    
+
     <!-- Sweet Alert 2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7/dist/sweetalert2.all.min.js"></script>
-    
+
     <!-- SPECIFIC CSS -->
     <link href="~/Content/css/admin.css" rel="stylesheet">
 
@@ -77,279 +36,392 @@
 </head>
 <body>
 
-<div id="preloader">
-    <div class="sk-spinner sk-spinner-wave">
-        <div class="sk-rect1"></div>
-        <div class="sk-rect2"></div>
-        <div class="sk-rect3"></div>
-        <div class="sk-rect4"></div>
-        <div class="sk-rect5"></div>
+    <div id="preloader">
+        <div class="sk-spinner sk-spinner-wave">
+            <div class="sk-rect1"></div>
+            <div class="sk-rect2"></div>
+            <div class="sk-rect3"></div>
+            <div class="sk-rect4"></div>
+            <div class="sk-rect5"></div>
+        </div>
     </div>
-</div>
-<!-- End Preload -->
+    <!-- End Preload -->
 
-<div class="layer"></div>
-<!-- Mobile menu overlay mask -->
+    <div class="layer"></div>
+    <!-- Mobile menu overlay mask -->
 
-@Html.Partial("_PartialMenu")
+    @Html.Partial("_PartialMenu")
 
-@RenderBody()
+    @RenderBody()
 
-<footer class="revealed">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h3>Need help?</h3>
-                <a href="tel://004542344599" id="phone">+45 423 445 99</a>
-                <a href="mailto:help@citytours.com" id="email_footer">help@citytours.com</a>
-            </div>
-            <div class="col-md-3">
-                <h3>About</h3>
-                <ul>
-                    <li>
-                        <a href="#">About us</a>
-                    </li>
-                    <li>
-                        <a href="#">FAQ</a>
-                    </li>
-                    <li>
-                        <a href="#">Login</a>
-                    </li>
-                    <li>
-                        <a href="#">Register</a>
-                    </li>
-                    <li>
-                        <a href="#">Terms and condition</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h3>Discover</h3>
-                <ul>
-                    <li>
-                        <a href="#">Community blog</a>
-                    </li>
-                    <li>
-                        <a href="#">Tour guide</a>
-                    </li>
-                    <li>
-                        <a href="#">Wishlist</a>
-                    </li>
-                    <li>
-                        <a href="#">Gallery</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-2">
-                <h3>Settings</h3>
-                <div class="styled-select">
-                    <select name="lang" id="lang">
-                        <option value="English" selected>English</option>
-                        <option value="French">French</option>
-                        <option value="Spanish">Spanish</option>
-                        <option value="Russian">Russian</option>
-                    </select>
+    <footer class="revealed">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Yardım mı lazım?</h3>
+                    <a href="tel://004542344599" id="phone">+45 423 445 99</a>
+                    <a href="mailto:help@citytours.com" id="email_footer">help@tatilcim.com</a>
                 </div>
-                <div class="styled-select">
-                    <select name="currency" id="currency">
-                        <option value="USD" selected>USD</option>
-                        <option value="EUR">EUR</option>
-                        <option value="GBP">GBP</option>
-                        <option value="RUB">RUB</option>
-                    </select>
-                </div>
-            </div>
-        </div><!-- End row -->
-        <div class="row">
-            <div class="col-md-12">
-                <div id="social_footer">
+                <div class="col-md-3">
+                    <h3>Biz Kimiz</h3>
                     <ul>
                         <li>
-                            <a href="#">
-                                <i class="icon-facebook"></i>
-                            </a>
+                            <a href="/Home/Hakkinda">Hakkımızda</a>
                         </li>
                         <li>
-                            <a href="#">
-                                <i class="icon-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="icon-google"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="icon-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="icon-pinterest"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="icon-vimeo"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="icon-youtube-play"></i>
-                            </a>
+                            <a href="#">SSS</a>
                         </li>
                     </ul>
-                    <p>© Citytours 2018</p>
                 </div>
-            </div>
-        </div><!-- End row -->
-    </div><!-- End container -->
-</footer><!-- End footer -->
+                <div class="col-md-3">
+                    <h3>İnceleyin</h3>
+                    <ul>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Turlarımız</a>
+                        </li>
+                        <li>
+                            <a href="#">Yorumlar</a>
+                        </li>
+                        <li>
+                            <a href="#">Galeri</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- End row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="social_footer">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-google"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-pinterest"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-vimeo"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-youtube-play"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <p>© Tatilcim.com @DateTime.Now.Year</p>
+                    </div>
+                </div>
+            </div><!-- End row -->
+        </div><!-- End container -->
+    </footer><!-- End footer -->
 
-<div id="toTop"></div><!-- Back to top button -->
-<!-- Search Menu -->
-<div class="search-overlay-menu">
-    <span class="search-overlay-close">
-        <i class="icon_set_1_icon-77"></i>
-    </span>
-    <form role="search" id="searchform" method="get">
-        <input value="" name="q" type="search" placeholder="Search..."/>
-        <button type="submit">
-            <i class="icon_set_1_icon-78"></i>
-        </button>
-    </form>
-</div><!-- End Search Menu -->
-<!-- Sign In Popup -->
-<div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide">
-    <div class="small-dialog-header">
+    <div id="toTop"></div><!-- Back to top button -->
+    <!-- Search Menu -->
+    <div class="search-overlay-menu">
+        <span class="search-overlay-close">
+            <i class="icon_set_1_icon-77"></i>
+        </span>
+        <form role="search" id="searchform" method="get">
+            <input value="" name="q" type="search" placeholder="Ara..." />
+            <button type="submit">
+                <i class="icon_set_1_icon-78"></i>
+            </button>
+        </form>
+    </div><!-- End Search Menu -->
+    <!-- Sign In Popup -->
+    <div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide">
+        <div class="small-dialog-header">
             <h3>Giriş Yap</h3>
+        </div>
+        <form method="post" action="/Kayit/SingIn">
+            <div class="sign-in-wrapper">
+                <div class="form-group">
+                    <label>Kullanıcı Adı</label>
+                    <input type="text" class="form-control" name="DisplayName" id="email">
+                    <i class="icon_mail_alt"></i>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="Password" id="password" value="">
+                    <i class="icon_lock_alt"></i>
+                </div>
+                <div class="text-center">
+                    <input type="submit" value="Giriş Yap" class="btn_login">
+                </div>
+                <div class="text-center">
+                    Hesabın yokmu? <a href="/Kayit/Kullanici">Üye Ol</a>
+                </div>
+            </div>
+        </form>
+        <!--form -->
     </div>
-    <form method="post" action="/Kayit/SingIn">
-        <div class="sign-in-wrapper">
-            <div class="form-group">
-                <label>Kullanıcı Adı</label>
-                <input type="text" class="form-control" name="DisplayName" id="email">
-                <i class="icon_mail_alt"></i>
-            </div>
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" class="form-control" name="Password" id="password" value="">
-                <i class="icon_lock_alt"></i>
-            </div>
-            <div class="text-center">
-                <input type="submit" value="Giriş Yap" class="btn_login">
-            </div>
-            <div class="text-center">
-                Hesabın yokmu? <a href="/Kayit/Kullanici">Üye Ol</a>
+    <!-- /Sign In Popup -->
+    <!-- /Otel Başvuru Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Otel Başvuru Formu</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Kapat">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form enctype="multipart/form-data" class="form-group" action="/Kayit/OtelBasvuru" method="post">
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <input class="form-control mb-2" type="text" name="Name" placeholder="Adı" />
+                                <input class="form-control mb-2" type="tel" name="Tel" placeholder="Telefon" />
+                                <input class="form-control mb-2" type="email" name="Email" placeholder="Email" />
+                                <input class="form-control mb-2" type="text" name="Address" placeholder="Adres" />
+                                <input class="form-control mb-2" type="text" name="Description" placeholder="Açıklama" />
+                                <input class="form-control mb-2" type="number" name="Star" placeholder="Yıldız" />
+                                <input class="form-control mb-2" type="text" name="Cover" placeholder="Kapak Resmi " />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div><input type="checkbox" name="CarPark">Araba Parkı</div>
+                                <div><input type="checkbox" name="Restaurant">Restoran</div>
+                                <div><input type="checkbox" name="Pool">Havuz</div>
+                                <div><input type="checkbox" name="RoomService">Oda Servisi</div>
+                                <div><input type="checkbox" name="Wifi">Wifi</div>
+                            </div>
+                            <div class="col-6">
+                                <div><input type="checkbox" name="Bar">Bar</div>
+                                <div><input type="checkbox" name="Spa">Spa</div>
+                                <div><input type="checkbox" name="Gym">Spor Salonu</div>
+                                <div><input type="checkbox" name="Breakfast">Kahvaltı</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                        <button name="OtelKayıtBasvuru" id="otelKaydet" type="submit" class="btn btn-primary">Kaydol</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </form>
-    <!--form -->
-</div>
-<!-- /Sign In Popup -->
-<!-- /Otel Başvuru Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Otel Başvuru Formu</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Kapat">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+    </div>
+    <!-- /Otel Başvuru Modal -->
+    <!-- Oda Modal -->
+    <div class="modal fade" id="odaEkleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Oda Ekle</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="/Otel/OdaEkle" method="post">
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Ad:</label>
+                            <input type="text" class="form-control" name="Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Ücret:</label>
+                            <input type="number" class="form-control" name="Price">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Kişi Sayısı:</label>
+                            <input type="number" class="form-control" name="PersonCount">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Kapak Resmi:</label>
+                            <input type="text" class="form-control" name="Cover">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Telefon:</label>
+                                    <input type="checkbox" class="form-control" name="Tel">
+                                </div>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">TV:</label>
+                                    <input type="checkbox" class="form-control" name="TV">
+                                </div>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Klima:</label>
+                                    <input type="checkbox" class="form-control" name="Clima">
+                                </div>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">MiniBar:</label>
+                                    <input type="checkbox" class="form-control" name="MiniBar">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Jakuzi:</label>
+                                    <input type="checkbox" class="form-control" name="Jakuzi">
+                                </div>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Balkon:</label>
+                                    <input type="checkbox" class="form-control" name="Balcony">
+                                </div>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Banyo:</label>
+                                    <input type="checkbox" class="form-control" name="Bathroom">
+                                </div>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Fön Makinası:</label>
+                                    <input type="checkbox" class="form-control" name="Dryer">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Vazgeç</button>
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                    </div>
+                </form>
             </div>
-            <form enctype="multipart/form-data" class="form-group" action="/Kayit/OtelBasvuru" method="post">
-                <div class="modal-body">
-
-                    <div class="row">
-                        <div class="col-12">
-                            <input class="form-control mb-2" type="text" name="Name" placeholder="Adı" />
-                            <input class="form-control mb-2" type="tel" name="Tel" placeholder="Telefon" />
-                            <input class="form-control mb-2" type="email" name="Email" placeholder="Email" />
-                            <input class="form-control mb-2" type="text" name="Address" placeholder="Adres" />
-                            <input class="form-control mb-2" type="text" name="Description" placeholder="Açıklama" />
-                            <input class="form-control mb-2" type="number" name="Star" placeholder="Yıldız" />
-                            <input class="form-control mb-2" type="text" name="Cover" placeholder="Kapak Resmi " />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <div><input type="checkbox" name="CarPark">Araba Parkı</div>
-                            <div><input type="checkbox" name="Restaurant">Restoran</div>
-                            <div><input type="checkbox" name="Pool">Havuz</div>
-                            <div><input type="checkbox" name="RoomService">Oda Servisi</div>
-                            <div><input type="checkbox" name="Wifi">Wifi</div>
-                        </div>
-                        <div class="col-6">
-                            <div><input type="checkbox" name="Bar">Bar</div>
-                            <div><input type="checkbox" name="Spa">Spa</div>
-                            <div><input type="checkbox" name="Gym">Spor Salonu</div>
-                            <div><input type="checkbox" name="Breakfast">Kahvaltı</div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
-                    <button name="OtelKayıtBasvuru" id="otelKaydet" type="submit" class="btn btn-primary">Kaydol</button>
-                </div>
-            </form>
         </div>
     </div>
-</div>
-<!-- /Otel Başvuru Modal -->
-<!-- Common scripts -->
-<script src="~/Content/js/jquery-2.2.4.min.js"></script>
-<script src="~/Content/js/common_scripts_min.js"></script>
-<script src="~/Content/js/functions.js"></script>
-<link href="~/Content/bootstrap-grid.css" rel="stylesheet"/>
-<script>
-    $('input.date-pick').datepicker('setDate', 'today');
-    $('input.time-pick').timepicker({
-        minuteStep: 15,
-        showInpunts: false
-    })
-</script>
-
-<script src="~/Content/js/jquery.ddslick.js"></script>
-<script>
-    $("select.ddslick").each(function() {
-        $(this).ddslick({
-            showSelectedHTML: true
-        });
-    });
-</script>
-
-<!-- Check box and radio style iCheck -->
-<script>
-    $('input').iCheck({
-        checkboxClass: 'icheckbox_square-grey',
-        radioClass: 'iradio_square-grey'
-    });
-</script>
-@if (@ViewBag.Status != null)
-{
+    <!-- Oda Modal Bitiş-->
+    <!-- Rezervasyon Modal -->
+    <div class="modal fade" id="RezervasyonModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Rezervasyon Yap</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="/Otel/OdaEkle" method="post">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Giriş Tarihi:</label>
+                                    <input type="date" class="form-control" name="GirisTarihi">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Çıkış Tarihi:</label>
+                                    <input type="date" class="form-control" name="CikisTarihi">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Kişi Sayısı:</label>
+                            <input type="number" readonly="readonly" value="" class="form-control" name="KisiSayisi">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Vazgeç</button>
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Rezervayon Modal Bitiş-->
+    <!-- Common scripts -->
+    <script src="~/Content/js/jquery-2.2.4.min.js"></script>
+    <script src="~/Content/js/common_scripts_min.js"></script>
+    <script src="~/Content/js/functions.js"></script>
+    <link href="~/Content/bootstrap-grid.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.signalR-2.3.0.min.js"></script>
     <script>
-        $(document).ready(function () {
-            swal(
+        $('input.date-pick').datepicker('setDate', 'today');
+        $('input.time-pick').timepicker({
+            minuteStep: 15,
+            showInpunts: false
+        })
+    </script>
+
+    <script src="~/Content/js/jquery.ddslick.js"></script>
+    <script>
+        $("select.ddslick").each(function () {
+            $(this).ddslick({
+                showSelectedHTML: true
+            });
+        });
+    </script>
+
+    <!-- Check box and radio style iCheck -->
+    <script>
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-grey',
+            radioClass: 'iradio_square-grey'
+        });
+    </script>
+    @if (@ViewBag.Status != null)
+    {
+        <script>
+            $(document).ready(function () {
+                swal(
                     'İşlem Başarılı!',
                     'Sizi inceledikten sonra size dönüş yapacağız.',
                     'success'
                 );
-        
-        });
-    </script>
-}
 
-<script src="~/Content/js/tabs.js"></script>
-<script>
-    new CBPFWTabs(document.getElementById('tabs'));
-</script>
-<script>
-    $('.wishlist_close_admin').on('click', function (c) {
-        $(this).parent().parent().parent().fadeOut('slow', function (c) {});
+            });
+        </script>
+    }
+
+    <script src="~/Content/js/tabs.js"></script>
+    <script>
+        new CBPFWTabs(document.getElementById('tabs'));
+    </script>
+    <script>
+        $('.wishlist_close_admin').on('click',
+            function (c) {
+                $(this).parent().parent().parent().fadeOut('slow', function (c) { });
+            });
+    </script>
+
+    <script>
+    $(document).ready(function() {
+        var UserId = @Session["Id"];
+        $.connection.hub.start();
+        var rezerveHub = $connection.rezerveHub;
+
+        $('#btnRezerve').on('click', function() {
+            var OtelId = $(this).attr("data-id");
+            rezerveHub.server.getRezerve(UserId, OtelId);
+        });
+
+
+        $('#buton').on('click',
+            function() {
+                var otelId = $(this).attr('data-id');
+
+            });
+
     });
-</script>
+    </script>
 
 </body>
 </html>

@@ -65,7 +65,7 @@
                                     </td>
                                     <td>
                                         <button id="getDetailJS" data-id="@veri.Id" class="btn btn-warning btn-circle waves-effect">
-                                            <i style="padding-top: 4px" class="fas fa-info-circle"></i>
+                                            <i style="padding-top: 4px"  class="fas fa-info-circle"></i>
                                         </button>
                                     </td>
                                 </tr>
@@ -102,7 +102,8 @@
 <script type="text/javascript">
     $(document).ready(function () {
         
-        $("#getDetailJS").on("click", function () {
+        $("#getDetailJS").on("click", function (e) {
+            e.preventDefault();
             $('#icerik').empty();
             var Id = $(this).attr("data-id");
             $.ajax(
@@ -146,8 +147,8 @@
                     success: function (result) {
                         alert(result);
                         swal(
-                            'Good job!',
-                            'You clicked the button!',
+                            'İyi İş!',
+                            'İşlem Tamam!',
                             result
                         )
                     },

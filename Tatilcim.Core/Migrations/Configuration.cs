@@ -1,4 +1,4 @@
-using Tatilcim.Domain.Concrate;
+ï»¿using Tatilcim.Domain.Concrate;
 
 namespace Tatilcim.Core.Migrations
 {
@@ -20,15 +20,16 @@ namespace Tatilcim.Core.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
-            context.Authorities.Add(new Authority()
+
+            context.Authorities.AddOrUpdate(new Authority()
             {
-                Id =1,
+                Id = 1,
                 Command = "SuperAdmin",
                 CreatedAt = DateTime.Now,
                 UpdatedAt = DateTime.Now,
-                
+
             });
-            context.Authorities.Add(new Authority()
+            context.Authorities.AddOrUpdate(new Authority()
             {
                 Id = 2,
                 Command = "Admin",
@@ -36,7 +37,7 @@ namespace Tatilcim.Core.Migrations
                 UpdatedAt = DateTime.Now,
 
             });
-            context.Authorities.Add(new Authority()
+            context.Authorities.AddOrUpdate(new Authority()
             {
                 Id = 3,
                 Command = "Costumer",
@@ -45,29 +46,16 @@ namespace Tatilcim.Core.Migrations
 
             });
 
-            context.Users.Add(new User()
-            {
-                Id = 1,
-                AuthorityId = 1,
-                Description = "Sistem SüperAdmini",
-                DisplayName = "sitahmetemin",
-                Name = "Ahmet Emin ÞÝT",
-                Email = "sitahmetemin@gmail.com",
-                Password = "123654",
-                Image = "https://mbtskoudsalg.com/images/profile-avatar-png-4.png",
-                CreatedAt = DateTime.Now,
-                UpdatedAt = DateTime.Now,
-            });
-
-            context.Otels.Add(new Otel()
+            context.Otels.AddOrUpdate(new Otel()
             {
                 Name = "Grand Kaptan",
                 Address = "Alanya",
-                Description = "Otel Açýklamasý",
-                Email = "otel@otel.com",
+                Description = "Otel AÃ§Ä±klamasÄ± Burada",
+                Email = "otel1@otel.com",
                 Bar = "on",
                 Breakfast = "on",
                 CarPark = "on",
+                Gym = "on",
                 CreatedAt = DateTime.Now,
                 UpdatedAt = DateTime.Now,
                 Cover = "https://cdn.tatilbudur.net/otel/960x475/grand-kaptan-hotel_185131.jpg",
@@ -76,38 +64,80 @@ namespace Tatilcim.Core.Migrations
                 Tel = "0212 212 12 12"
             });
 
-            context.Otels.Add(new Otel()
+            context.Otels.AddOrUpdate(new Otel()
             {
-                Name = "KAplýcalar",
-                Address = "Muðla",
-                Description = "Otel Açýklamasý",
-                Email = "otel@otel.com",
+                Name = "KaplÄ±calar",
+                Address = "MuÄŸla",
+                Description = "Otel AÃ§Ä±klamasÄ± KardeÅŸim",
+                Email = "otel2@otel.com",
                 Bar = "on",
                 Breakfast = "on",
                 CarPark = "on",
                 CreatedAt = DateTime.Now,
                 UpdatedAt = DateTime.Now,
                 Cover = "https://cdn.tatilbudur.net/otel/960x475/grand-kaptan-hotel_185129.jpg",
-                Star = 2,
+                Star = 5,
                 Status = true,
                 Tel = "0212 212 12 12"
             });
 
-            context.Otels.Add(new Otel()
+            context.Otels.AddOrUpdate(new Otel()
             {
-                Name = "KApalý Otel",
-                Address = "artvin",
+                Name = "KapalÄ± Otel",
+                Address = "Artvin",
                 Description = "ooo comolokko",
-                Email = "otel@otel.com",
+                Email = "otel3@otel.com",
                 Bar = "on",
-                Breakfast = "on",
                 CarPark = "on",
                 CreatedAt = DateTime.Now,
                 UpdatedAt = DateTime.Now,
                 Cover = "https://cdn.tatilbudur.net/otel/960x475/grand-kaptan-hotel_185129.jpg",
-                Star = 2,
+                Star = 8,
                 Status = false,
-                Tel = "0212 212 12 12"
+                Tel = "0282 339 85 08"
+            });
+
+            context.Users.AddOrUpdate(new User()
+            {
+                Id = 1,
+                AuthorityId = 1,
+                Description = "Sistem SÃ¼perAdmini",
+                DisplayName = "sitahmetemin",
+                Name = "Ahmet Emin ÅžÄ°T",
+                Email = "sitahmetemin@gmail.com",
+                Password = "123654",
+                Image = "https://mbtskoudsalg.com/images/profile-avatar-png-4.png",
+                CreatedAt = DateTime.Now,
+                UpdatedAt = DateTime.Now,
+            });
+
+            context.Users.AddOrUpdate(new User()
+            {
+                Id = 1,
+                AuthorityId = 2,
+                Description = "Otel Sahibi",
+                DisplayName = "ahmeteminsit",
+                Name = "Ahmet Zade",
+                OtelId = 1,
+                Email = "sitahmetemin@hotmail.com",
+                Password = "123654",
+                Image = "https://www.mac-hotels.com/wp-content/blogs.dir/1262/files/Homeymas/home_mini_marina-1.jpg.pagespeed.ce.-LQmHg6YCg.jpg",
+                CreatedAt = DateTime.Now,
+                UpdatedAt = DateTime.Now,
+            });
+
+            context.Users.AddOrUpdate(new User()
+            {
+                Id = 1,
+                AuthorityId = 3,
+                Description = "MÃ¼ÅŸteri",
+                DisplayName = "fitifiti",
+                Name = "FÄ±tÄ±fÄ±tÄ±",
+                Email = "sitahmetemin@yandex.com",
+                Password = "123654",
+                Image = "https://www.mac-hotels.com/wp-content/blogs.dir/1262/files/Homeymas/home_mini_marina-1.jpg.pagespeed.ce.-LQmHg6YCg.jpg",
+                CreatedAt = DateTime.Now,
+                UpdatedAt = DateTime.Now,
             });
 
         }

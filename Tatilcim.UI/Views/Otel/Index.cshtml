@@ -1,7 +1,17 @@
-﻿
+﻿@model Tatilcim.Common.Dtos.OtelDto
 @{
     ViewBag.Title = "Otel Admin";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var CarPark = Model.CarPark == "on" ? "checked" : "";
+    var Restaurant = Model.Restaurant == "on" ? "checked" : "";
+    var Bar = Model.Bar == "on" ? "checked" : "";
+    var Spa = Model.Spa == "on" ? "checked" : "";
+    var Pool = Model.Pool == "on" ? "checked" : "";
+    var Gym = Model.Gym == "on" ? "checked" : "";
+    var RoomService = Model.RoomService == "on" ? "checked" : "";
+    var Breakfast = Model.Breakfast == "on" ? "checked" : "";
+    var Wifi = Model.Wifi == "on" ? "checked" : "";
 }
 <section class="parallax-window" data-parallax="scroll" data-image-src="http://kidytour.ru/wp-content/uploads/2017/07/azura-from-internet.jpg" data-natural-width="1400" data-natural-height="470">
     <div class="parallax-content-1">
@@ -192,213 +202,46 @@
 
                 <section id="section-2">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="hotel_container">
-                                <div class="img_container">
-                                    <a href="single_hotel.html">
-                                        <img src="~/Content/img/hotel_1.jpg" width="800" height="533" class="img-fluid" alt="Image">
-                                        <div class="ribbon top_rated">
-                                        </div>
-                                        <div class="score">
-                                            <span>7.5</span>Good
-                                        </div>
-                                        <div class="short_info hotel">
-                                            From/Per night<span class="price"><sup>$</sup>59</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="hotel_title">
-                                    <h3><strong>Park Hyatt</strong> Hotel</h3>
-                                    <div class="rating">
-                                        <i class="icon-star voted"></i><i class="icon-star voted"></i><i class="icon-star voted"></i><i class="icon-star voted"></i><i class="icon-star-empty"></i>
-                                    </div>
-                                    <!-- end rating -->
-                                    <div class="wishlist_close_admin">
-                                        -
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End box tour -->
-                        </div>
-                        <!-- End col-md-6 -->
-
-                        <div class="col-lg-4 col-md-6 ">
-                            <div class="hotel_container">
-                                <div class="img_container">
-                                    <a href="single_hotel.html">
-                                        <img src="~/Content/img/hotel_2.jpg" width="800" height="533" class="img-fluid" alt="Image">
-                                        <div class="ribbon top_rated">
-                                        </div>
-                                        <div class="score">
-                                            <span>9.0</span>Superb
-                                        </div>
-                                        <div class="short_info hotel">
-                                            From/Per night<span class="price"><sup>$</sup>45</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="hotel_title">
-                                    <h3><strong>Mariott</strong> Hotel</h3>
-                                    <div class="rating">
-                                        <i class="icon-star voted"></i><i class="icon-star voted"></i><i class="icon-star voted"></i><i class="icon-star voted"></i><i class="icon-star-empty"></i>
-                                    </div>
-                                    <!-- end rating -->
-                                    <div class="wishlist_close_admin">
-                                        -
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End box -->
-                        </div>
-                        <!-- End col-md-6 -->
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="tour_container">
-                                <div class="img_container">
-                                    <a href="single_tour.html">
-                                        <img src="~/Content/img/tour_box_1.jpg" width="800" height="533" class="img-fluid" alt="Image">
-                                        <div class="ribbon top_rated">
-                                        </div>
-                                        <div class="short_info">
-                                            <i class="icon_set_1_icon-44"></i>Historic Buildings<span class="price"><sup>$</sup>45</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="tour_title">
-                                    <h3><strong>Arc Triomphe</strong> tour</h3>
-                                    <div class="rating">
-                                        <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
-                                    </div>
-                                    <!-- end rating -->
-                                    <div class="wishlist_close_admin">
-                                        -
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End box tour -->
-                        </div>
-                        <!-- End col-md-6 -->
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="tour_container">
-                                <div class="img_container">
-                                    <a href="single_tour.html">
-                                        <img src="~/Content/img/tour_box_3.jpg" width="800" height="533" class="img-fluid" alt="Image">
-                                        <div class="ribbon popular">
-                                        </div>
-                                        <div class="short_info">
-                                            <i class="icon_set_1_icon-44"></i>Historic Buildings<span class="price"><sup>$</sup>45</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="tour_title">
-                                    <h3><strong>Versailles</strong> tour</h3>
-                                    <div class="rating">
-                                        <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
-                                    </div>
-                                    <!-- end rating -->
-                                    <div class="wishlist_close_admin">
-                                        -
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End box tour -->
-                        </div>
-                        <!-- End col-md-6 -->
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="tour_container">
-                                <div class="img_container">
-                                    <a href="single_tour.html">
-                                        <img src="~/Content/img/tour_box_4.jpg" width="800" height="533" class="img-fluid" alt="Image">
-                                        <div class="ribbon popular">
-                                        </div>
-                                        <div class="short_info">
-                                            <i class="icon_set_1_icon-30"></i>Walking tour<span class="price"><sup>$</sup>45</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="tour_title">
-                                    <h3><strong>Pompidue</strong> tour</h3>
-                                    <div class="rating">
-                                        <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
-                                    </div>
-                                    <!-- end rating -->
-                                    <div class="wishlist_close_admin">
-                                        -
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End box tour -->
-                        </div>
-                        <!-- End col-md-6 -->
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="transfer_container">
-                                <div class="img_container">
-                                    <a href="single_transfer.html">
-                                        <img src="~/Content/img/transfer_1.jpg" width="800" height="533" class="img-fluid" alt="Image">
-                                        <div class="ribbon top_rated">
-                                        </div>
-                                        <div class="short_info">
-                                            From/Per person<span class="price"><sup>$</sup>45</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="transfer_title">
-                                    <h3><strong>Orly Airport</strong> private</h3>
-                                    <div class="rating">
-                                        <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
-                                    </div>
-                                    <!-- end rating -->
-                                    <div class="wishlist_close_admin">
-                                        -
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End box tour -->
-                        </div>
-                        <!-- End col-md-6 -->
-
+                        @{
+                            Html.RenderAction("_PartialOdalar");
+                        }
+                        
                     </div>
                     <!-- End row -->
-                    <button type="submit" class="btn_1 green">Oda Ekle</button>
+                    <button type="button" data-toggle="modal" data-target="#odaEkleModal" class="btn_1 green">Oda Ekle</button>
                 </section>
                 <!-- End section 2 -->
 
-                <section id="section-3">
+            <section id="section-3">
+                <form>
                     <div class="row">
                         <div class="col-md-6 add_bottom_30">
-                            <h4>Change your password</h4>
                             <div class="form-group">
-                                <label>Old password</label>
-                                <input class="form-control" name="old_password" id="old_password" type="password">
+                                <label>Adı</label>
+                                <input class="form-control" name="Name" value="@Model.Name" type="text">
                             </div>
                             <div class="form-group">
-                                <label>New password</label>
-                                <input class="form-control" name="new_password" id="new_password" type="password">
+                                <label>Adresi</label>
+                                <input class="form-control" name="Address" value="@Model.Address" type="text">
                             </div>
                             <div class="form-group">
-                                <label>Confirm new password</label>
-                                <input class="form-control" name="confirm_new_password" id="confirm_new_password" type="password">
+                                <label>Açıklaması</label>
+                                <input class="form-control" name="Description" value="@Model.Description" type="text">
                             </div>
-                            <button type="submit" class="btn_1 green">Update Password</button>
+                            <div class="form-group">
+                                <label>Yıldız</label>
+                                <input class="form-control" name="Star" value="@Model.Star" type="text">
+                            </div>
                         </div>
                         <div class="col-md-6 add_bottom_30">
-                            <h4>Change your email</h4>
                             <div class="form-group">
-                                <label>Old email</label>
-                                <input class="form-control" name="old_password" id="old_password" type="password">
+                                <label>Telefon</label>
+                                <input class="form-control" name="Tel" value="@Model.Tel" type="text">
                             </div>
                             <div class="form-group">
-                                <label>New email</label>
-                                <input class="form-control" name="new_password" id="new_password" type="password">
+                                <label>Email</label>
+                                <input class="form-control" name="Email" value="@Model.Email" type="text">
                             </div>
-                            <div class="form-group">
-                                <label>Confirm new email</label>
-                                <input class="form-control" name="confirm_new_password" id="confirm_new_password" type="password">
-                            </div>
-                            <button type="submit" class="btn_1 green">Update Email</button>
                         </div>
                     </div>
                     <!-- End row -->
@@ -407,88 +250,139 @@
                     <br>
                     <div class="row">
                         <div class="col-lg-6">
-                            <h4>Notification settings</h4>
+                            
                             <table class="table table-striped options_cart">
                                 <tbody>
-                                    <tr>
-                                        <td style="width:10%">
-                                            <i class="icon_set_1_icon-33"></i>
-                                        </td>
-                                        <td style="width:60%">
-                                            New Citytours Tours
-                                        </td>
-                                        <td style="width:35%">
-                                            <label class="switch-light switch-ios pull-right">
-                                                <input type="checkbox" name="option_1" id="option_1" checked value="">
-                                                <span>
-                                                    <span>No</span>
-                                                    <span>Yes</span>
-                                                </span>
-                                                <a></a>
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <i class="icon_set_1_icon-6"></i>
-                                        </td>
-                                        <td>
-                                            New Citytours Hotels
-                                        </td>
-                                        <td>
-                                            <label class="switch-light switch-ios pull-right">
-                                                <input type="checkbox" name="option_2" id="option_2" value="">
-                                                <span>
-                                                    <span>No</span>
-                                                    <span>Yes</span>
-                                                </span>
-                                                <a></a>
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <i class="icon_set_1_icon-26"></i>
-                                        </td>
-                                        <td>
-                                            New Citytours Transfers
-                                        </td>
-                                        <td>
-                                            <label class="switch-light switch-ios pull-right">
-                                                <input type="checkbox" name="option_3" id="option_3" value="" checked>
-                                                <span>
-                                                    <span>No</span>
-                                                    <span>Yes</span>
-                                                </span>
-                                                <a></a>
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <i class="icon_set_1_icon-81"></i>
-                                        </td>
-                                        <td>
-                                            New Citytours special offers
-                                        </td>
-                                        <td>
-                                            <label class="switch-light switch-ios pull-right">
-                                                <input type="checkbox" name="option_4" id="option_4" value="">
-                                                <span>
-                                                    <span>No</span>
-                                                    <span>Yes</span>
-                                                </span>
-                                                <a></a>
-                                            </label>
-                                        </td>
-                                    </tr>
+                                <tr>
+                                    <td style="width: 10%">
+                                        <i class=" icon_set_1_icon-21"></i>
+                                    </td>
+                                    <td style="width: 60%">
+                                        Otopark
+                                    </td>
+                                    <td style="width: 35%">
+                                        <label class="switch-light switch-ios pull-right">
+                                            <input type="checkbox" name="CarPark"   @CarPark>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class=" icon_set_1_icon-58"></i>
+                                    </td>
+                                    <td>
+                                        Restoran
+                                    </td>
+                                    <td>
+                                        <label class="switch-light switch-ios pull-right">
+                                            <input type="checkbox" name="Restaurant" @Restaurant >
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="icon_set_1_icon-20"></i>
+                                    </td>
+                                    <td>
+                                        Bar
+                                    </td>
+                                    <td>
+                                        <label class="switch-light switch-ios pull-right">
+                                            <input type="checkbox" name="Bar"  @Bar>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="icon_set_2_icon-111"></i>
+                                    </td>
+                                    <td>
+                                        Spa
+                                    </td>
+                                    <td>
+                                        <label class="switch-light switch-ios pull-right">
+                                            <input type="checkbox" name="Spa"  @Spa>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="icon_set_2_icon-108"></i>
+                                    </td>
+                                    <td>
+                                        Havuz
+                                    </td>
+                                    <td>
+                                        <label class="switch-light switch-ios pull-right">
+                                            <input type="checkbox" name="Pool" @Pool>
+                                        </label>
+                                    </td>
+                                </tr>
+                                
                                 </tbody>
                             </table>
-                            <button type="submit" class="btn_1 green">Update notifications settings</button>
+                            <button type="submit" class="btn_1 green">Güncelle</button>
+                        </div>
+                        <div class="col-md-6">
+                            <table class="table table-striped options_cart">
+                                <tr>
+                                    <td>
+                                        <i class="icon_set_2_icon-117"></i>
+                                    </td>
+                                    <td>
+                                        Spor Salonu
+                                    </td>
+                                    <td>
+                                        <label class="switch-light switch-ios pull-right">
+                                            <input type="checkbox" name="Gym" @Gym>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="icon_set_2_icon-105"></i>
+                                    </td>
+                                    <td>
+                                        Oda Servisi
+                                    </td>
+                                    <td>
+                                        <label class="switch-light switch-ios pull-right">
+                                            <input type="checkbox" name="RoomService" @RoomService>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="icon_set_3_restaurant-10"></i>
+                                    </td>
+                                    <td>
+                                        Kahvaltı
+                                    </td>
+                                    <td>
+                                        <label class="switch-light switch-ios pull-right">
+                                            <input type="checkbox" name="Breakfast" @Breakfast>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="icon_set_1_icon-86"></i>
+                                    </td>
+                                    <td>
+                                        Wifi
+                                    </td>
+                                    <td>
+                                        <label class="switch-light switch-ios pull-right">
+                                            <input type="checkbox" name="Wifi" @Wifi>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                     <!-- End row -->
-                </section>
+                </form>
+            </section>
                 <!-- End section 3 -->
 
                 <section id="section-4">
@@ -642,4 +536,6 @@
     <!-- end container -->
 </main>
 <!-- End main -->
+
+
 

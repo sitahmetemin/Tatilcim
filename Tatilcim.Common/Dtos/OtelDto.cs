@@ -9,11 +9,6 @@ namespace Tatilcim.Common.Dtos
 {
     public class OtelDto : BaseDto
     {
-        public OtelDto()
-        {
-            
-        }
-
         public string Name { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }

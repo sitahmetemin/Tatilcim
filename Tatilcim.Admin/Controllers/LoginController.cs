@@ -36,8 +36,8 @@ namespace Tatilcim.Admin.Controllers
                     return RedirectToAction("Index", "Home");
                 }
             }
-            //return Redirect("/Login");
-            return View();
+            return Redirect("/Login");
+            //return View();
 
         }
     }

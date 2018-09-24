@@ -12,9 +12,13 @@ namespace Tatilcim.Core.Services
     {
         List<Otel> GetOtels();
         List<Otel> GetActiveOtels();
+        List<OtelDto> GetActiveRandomOtels();
         OtelDto GetOtelByName(OtelDto otel);
+        List<OdaDto> GetRooms(OtelDto Otel);
         void InsertNewOtel(OtelDto otel);
+        void InsertNewRoom(OdaDto Oda);
         void UpdateOtel(OtelDto otel);
         void DeleteOtel(OtelDto otel);
+        void DeleteRoom(OdaDto oda);
     }
 }

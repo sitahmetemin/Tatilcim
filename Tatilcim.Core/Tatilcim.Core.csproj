@@ -83,25 +83,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201809190830275_firstMig.cs" />
-    <Compile Include="Migrations\201809190830275_firstMig.Designer.cs">
-      <DependentUpon>201809190830275_firstMig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809190926087_otelEdit.cs" />
-    <Compile Include="Migrations\201809190926087_otelEdit.Designer.cs">
-      <DependentUpon>201809190926087_otelEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809191100417_otelEdit1.cs" />
-    <Compile Include="Migrations\201809191100417_otelEdit1.Designer.cs">
-      <DependentUpon>201809191100417_otelEdit1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809191228515_otelEdit2.cs" />
-    <Compile Include="Migrations\201809191228515_otelEdit2.Designer.cs">
-      <DependentUpon>201809191228515_otelEdit2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809201122229_UserOtelDuzenlemesi.cs" />
-    <Compile Include="Migrations\201809201122229_UserOtelDuzenlemesi.Designer.cs">
-      <DependentUpon>201809201122229_UserOtelDuzenlemesi.cs</DependentUpon>
+    <Compile Include="Migrations\201809241428381_FirstMig.cs" />
+    <Compile Include="Migrations\201809241428381_FirstMig.Designer.cs">
+      <DependentUpon>201809241428381_FirstMig.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -129,20 +113,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201809190830275_firstMig.resx">
-      <DependentUpon>201809190830275_firstMig.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809190926087_otelEdit.resx">
-      <DependentUpon>201809190926087_otelEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809191100417_otelEdit1.resx">
-      <DependentUpon>201809191100417_otelEdit1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809191228515_otelEdit2.resx">
-      <DependentUpon>201809191228515_otelEdit2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809201122229_UserOtelDuzenlemesi.resx">
-      <DependentUpon>201809201122229_UserOtelDuzenlemesi.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809241428381_FirstMig.resx">
+      <DependentUpon>201809241428381_FirstMig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

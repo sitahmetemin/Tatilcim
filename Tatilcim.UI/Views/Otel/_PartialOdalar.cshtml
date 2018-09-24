@@ -1,0 +1,31 @@
+﻿@model List<Tatilcim.Common.Dtos.OdaDto>
+@foreach (var icerik in Model)
+{
+    <div class="col-lg-4 col-md-6 ">
+        <div class="hotel_container">
+            <div class="img_container">
+                <a href="single_hotel.html">
+                    <img src="@icerik.Cover" width="800" height="533" class="img-fluid" alt="Image">
+                    <div class="ribbon top_rated">
+                    </div>
+                    <div class="score">
+                        <span>@icerik.PersonCount</span>Kişilik
+                    </div>
+                    <div class="short_info hotel">
+                        Gecelik<span class="price"><sup>₺</sup>@icerik.Price</span>
+                    </div>
+                </a>
+            </div>
+            <div class="hotel_title">
+                <h3><strong>@icerik.Name</strong> Hotel</h3>
+                <!-- end rating -->
+                <div title="Sil" class="icon-trash">
+                    <a href="/Otel/Sil/@icerik.Id">Sil</a>
+                </div>
+            </div>
+        </div>
+        <!-- End box -->
+    </div>
+    <!-- End col-md-6 -->
+}
+@*~/Content/img/hotel_2.jpg*@
