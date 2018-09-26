@@ -1,0 +1,2 @@
+# Tatilcim
+Proje, otel bulmak için tasarlanmıştır. Sistem güncel Teknolojiler kullanılarak tasarlandı. Sistemde Otel başvuru yaparak otelini kayıt ettirebilir ve ardından son kullanıcıya otelini ve odalarını sergileyebilir. Oda bazlı fiyatlandırma söz konusudur. Sistemde Müşteri, Otel Yöneticisi ve Sistem Yöneticisi olarak 3 adet yetki seviyesi bulunmakta. Redis’te Session ve Cache tutuldu. Rezervasyon için SignalR ve RabbitMQ teknolojilerinde faydalanıldı. Otel araması için elasticsearch teknolojisi kullanıldı. Uyarılar için SweetAlert2 kullanıldı.
