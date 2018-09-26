@@ -40,6 +40,7 @@ namespace Tatilcim.Core.Services.Concrate
             {
                 odaBilgiler.Add(new OtelDto
                 {
+                    Id = room.Id,
                     Name = room.Name,
                     Description = room.Description,
                     Email = room.Email,
@@ -70,6 +71,7 @@ namespace Tatilcim.Core.Services.Concrate
                 var DBotel = _repo.Query<Otel>().FirstOrDefault(x => x.Id == otel.Id);
                 OtelDto otelBilgiler = new OtelDto()
                 {
+                    Id = DBotel.Id,
                     Name = DBotel.Name,
                     Description = DBotel.Description,
                     Email = DBotel.Email,
@@ -78,7 +80,7 @@ namespace Tatilcim.Core.Services.Concrate
                     Bar = DBotel.Bar,
                     Breakfast = DBotel.Breakfast,
                     CarPark = DBotel.CarPark,
-                    Cover = DBotel.CarPark,
+                    Cover = DBotel.Cover,
                     Gym = DBotel.Gym,
                     Pool = DBotel.Pool,
                     RoomService = DBotel.RoomService,
@@ -133,7 +135,7 @@ namespace Tatilcim.Core.Services.Concrate
                 Bar = otel.Bar,
                 Breakfast = otel.Breakfast,
                 CarPark = otel.CarPark,
-                Cover = otel.CarPark,
+                Cover = otel.Cover,
                 Gym = otel.Gym,
                 Pool = otel.Pool,
                 RoomService = otel.RoomService,

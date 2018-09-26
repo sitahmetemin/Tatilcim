@@ -1,0 +1,108 @@
+﻿@model IEnumerable<Tatilcim.Common.Dtos.OdaDto>
+
+@foreach (var Oda in Model)
+{
+    <div class="strip_all_tour_list wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+                <div class="img_list">
+                    <a href="single_hotel.html">
+                        <img src="@Oda.Cover" alt="Image">
+                        <div class="short_info"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="tour_list_desc">
+                    <div class="score">
+                        <span>@Oda.PersonCount</span>Kişilik
+                    </div>
+                    <div class="rating">
+                        <i class="icon-star voted"></i><i class="icon-star  voted"></i><i class="icon-star  voted"></i><i class="icon-star  voted"></i><i class="icon-star-empty"></i>
+                    </div>
+                    <h3><strong>@Oda.Name</strong> Oda</h3>
+
+                    <ul class="add_info">
+                        @{
+                            if (Oda.Balcony == "on")
+                            {
+                                <li>
+                                    <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="" data-original-title="Balkon">
+                                        <i class="pe-7s-drawer"></i>
+                                    </a>
+                                </li>
+                            }
+                            if (Oda.Tel == "on")
+                            {
+                                <li>
+                                    <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="" data-original-title="Telefon">
+                                        <i class="pe-7s-call"></i>
+                                    </a>
+                                </li>
+                            }
+                            if (Oda.Clima == "on")
+                            {
+                                <li>
+                                    <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="" data-original-title="Klima">
+                                        <i class="icon_set_2_icon-106"></i>
+                                    </a>
+                                </li>
+                            }
+                            if (Oda.MiniBar == "on")
+                            {
+                                <li>
+                                    <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="" data-original-title="Minibar">
+                                        <i class="pe-7s-wine"></i>
+                                    </a>
+                                </li>
+                            }
+                            if (Oda.Jakuzi == "on")
+                            {
+                                <li>
+                                    <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="" data-original-title="Jakuzi">
+                                        <i class="icon_set_2_icon-111"></i>
+                                    </a>
+                                </li>
+                            }
+                            if (Oda.Bathroom == "on")
+                            {
+                                <li>
+                                    <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="" data-original-title="Banyo">
+                                        <i class=" icon_set_2_icon-118"></i>
+                                    </a>
+                                </li>
+                            }
+                            if (Oda.Dryer == "on")
+                            {
+                                <li>
+                                    <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="" data-original-title="Fön Makinası">
+                                        <i class="icon_set_1_icon-100"></i>
+                                    </a>
+                                </li>
+                            }
+                            if (Oda.TV == "on")
+                            {
+                                <li>
+                                    <a href="javascript:void(0);" class="tooltip-1" data-placement="top" title="" data-original-title="Tv">
+                                        <i class="icon_set_2_icon-116"></i>
+                                    </a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="price_list">
+                    <div>
+                        <sup>₺</sup>@Oda.Price* 
+                        <small style="padding-top: 15px">*Gecelik</small>
+                        <p>
+                            <a href="JavaScript:Void(0);" id="" class="btn_1">Rezervanyon Yap</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

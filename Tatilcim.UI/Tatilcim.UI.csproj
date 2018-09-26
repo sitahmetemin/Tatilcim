@@ -1293,6 +1293,7 @@
     <Content Include="Views\Home\_PartialViewAnasafaRandom.cshtml" />
     <Content Include="Views\Detail\Otel.cshtml" />
     <Content Include="Views\Detail\Oda.cshtml" />
+    <Content Include="Views\Detail\_PartialOdaDetay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
