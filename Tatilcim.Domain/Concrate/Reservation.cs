@@ -10,6 +10,7 @@ namespace Tatilcim.Domain.Concrate
     public class Reservation : BaseEntity
     {
         public int PersonCount { get; set; }
+        public bool Status { get; set; }
         public DateTime EntryDate { get; set; }
         public DateTime ReleaseDate { get; set; }
 

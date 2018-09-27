@@ -44,6 +44,7 @@
     <Compile Include="Dtos\OdaDto.cs" />
     <Compile Include="Dtos\OtelDto.cs" />
     <Compile Include="Dtos\ReservationDto.cs" />
+    <Compile Include="Dtos\RezerveDto.cs" />
     <Compile Include="Dtos\UserDto.cs" />
     <Compile Include="General\BaseDto.cs" />
     <Compile Include="General\ServiceResult.cs" />

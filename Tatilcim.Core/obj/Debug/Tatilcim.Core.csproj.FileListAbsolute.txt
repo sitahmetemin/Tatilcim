@@ -127,9 +127,10 @@ C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\bin\Debug\System.Numerics.Vec
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\bin\Debug\System.ValueTuple.xml
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.csprojAssemblyReference.cache
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.Migrations.FirstMig.resources
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.csproj.GenerateResource.cache
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.csproj.CoreCompileInputs.cache
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.csproj.CopyComplete
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.pdb
-C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.Migrations.FirstMig.resources
-C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.csproj.GenerateResource.cache
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.Migrations.ReservationEdit.resources

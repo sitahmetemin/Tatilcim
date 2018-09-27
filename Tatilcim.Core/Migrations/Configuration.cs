@@ -48,6 +48,7 @@ namespace Tatilcim.Core.Migrations
 
             context.Otels.AddOrUpdate(new Otel()
             {
+                Id = 1,
                 Name = "Grand Kaptan",
                 Address = "Alanya",
                 Description = "Otel Açıklaması Burada",
@@ -66,6 +67,7 @@ namespace Tatilcim.Core.Migrations
 
             context.Otels.AddOrUpdate(new Otel()
             {
+                Id = 2,
                 Name = "Kaplıcalar",
                 Address = "Muğla",
                 Description = "Otel Açıklaması Kardeşim",
@@ -83,6 +85,7 @@ namespace Tatilcim.Core.Migrations
 
             context.Otels.AddOrUpdate(new Otel()
             {
+                Id = 3,
                 Name = "Kapalı Otel",
                 Address = "Artvin",
                 Description = "ooo comolokko",
@@ -113,7 +116,7 @@ namespace Tatilcim.Core.Migrations
 
             context.Users.AddOrUpdate(new User()
             {
-                Id = 1,
+                Id = 2,
                 AuthorityId = 2,
                 Description = "Otel Sahibi",
                 DisplayName = "ahmeteminsit",
@@ -128,7 +131,7 @@ namespace Tatilcim.Core.Migrations
 
             context.Users.AddOrUpdate(new User()
             {
-                Id = 1,
+                Id = 3,
                 AuthorityId = 3,
                 Description = "Müşteri",
                 DisplayName = "fitifiti",

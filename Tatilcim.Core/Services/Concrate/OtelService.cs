@@ -106,6 +106,7 @@ namespace Tatilcim.Core.Services.Concrate
                 {
                     Id = room.Id,
                     Name = room.Name,
+                    OtelId = room.OtelId,
                     Balcony = room.Balcony,
                     Price = room.Price,
                     PersonCount = room.PersonCount,

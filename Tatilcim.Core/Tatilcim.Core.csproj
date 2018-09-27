@@ -87,6 +87,10 @@
     <Compile Include="Migrations\201809241428381_FirstMig.Designer.cs">
       <DependentUpon>201809241428381_FirstMig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809271108185_ReservationEdit.cs" />
+    <Compile Include="Migrations\201809271108185_ReservationEdit.Designer.cs">
+      <DependentUpon>201809271108185_ReservationEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\AbstractBaseRepository.cs" />
@@ -115,6 +119,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201809241428381_FirstMig.resx">
       <DependentUpon>201809241428381_FirstMig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809271108185_ReservationEdit.resx">
+      <DependentUpon>201809271108185_ReservationEdit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

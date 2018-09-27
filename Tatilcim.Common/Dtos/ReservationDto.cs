@@ -10,6 +10,7 @@ namespace Tatilcim.Common.Dtos
     public class ReservationDto : BaseDto
     {
         public int PersonCount { get; set; }
+        public bool Status { get; set; }
         public DateTime EntryDate { get; set; }
         public DateTime ReleaseDate { get; set; }
         public Nullable<int> OtelId { get; set; }

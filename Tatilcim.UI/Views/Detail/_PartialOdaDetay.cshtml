@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-4">
                 <div class="img_list">
-                    <a href="single_hotel.html">
+                    <a>
                         <img src="@Oda.Cover" alt="Image">
                         <div class="short_info"></div>
                     </a>
@@ -16,9 +16,6 @@
                 <div class="tour_list_desc">
                     <div class="score">
                         <span>@Oda.PersonCount</span>Kişilik
-                    </div>
-                    <div class="rating">
-                        <i class="icon-star voted"></i><i class="icon-star  voted"></i><i class="icon-star  voted"></i><i class="icon-star  voted"></i><i class="icon-star-empty"></i>
                     </div>
                     <h3><strong>@Oda.Name</strong> Oda</h3>
 
@@ -98,7 +95,16 @@
                         <sup>₺</sup>@Oda.Price* 
                         <small style="padding-top: 15px">*Gecelik</small>
                         <p>
-                            <a href="JavaScript:Void(0);" id="" class="btn_1">Rezervanyon Yap</a>
+                            @if (Session["Id"] != null)
+                            {
+                                <button onclick="btnRezerveYap(@Oda.Id, @Oda.OtelId);" type="button" class="btn_1">Rezervanyon Yap</button>
+                                //onclick = "btnRezerveYap(@Oda.Id, @Oda.OtelId);"
+                            }
+                            else
+                            {
+                                <small class="label label-info"> Giriş Yapmadan Rezervasyon yapamazsınız</small>
+                            }
+
                         </p>
                     </div>
                 </div>

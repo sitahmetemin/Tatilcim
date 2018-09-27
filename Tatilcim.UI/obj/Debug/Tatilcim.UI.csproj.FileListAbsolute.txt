@@ -160,6 +160,8 @@ C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.AspNet.SignalR.Co
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.AspNet.TelemetryCorrelation.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.Diagnostics.Tracing.EventSource.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.Owin.Cors.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.Owin.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.Owin.Security.dll
@@ -167,6 +169,7 @@ C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.Web.Infrastructur
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.Web.RedisSessionStateProvider.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Newtonsoft.Json.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Owin.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\RabbitMQ.Client.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\ServiceStack.Client.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\ServiceStack.Common.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\ServiceStack.dll
@@ -180,6 +183,7 @@ C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\System.Memory.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\System.Numerics.Vectors.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\System.ValueTuple.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\System.Web.Cors.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\System.Web.Helpers.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\System.Web.Mvc.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\System.Web.Optimization.dll
@@ -206,11 +210,14 @@ C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.AspNet.SignalR.Co
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.Diagnostics.Tracing.EventSource.xml
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.Owin.xml
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.Owin.Cors.xml
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.Owin.Security.xml
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.Web.RedisSessionStateProvider.pdb
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Newtonsoft.Json.xml
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\RabbitMQ.Client.xml
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\ServiceStack.xml
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\ServiceStack.Client.xml
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\ServiceStack.Common.xml
@@ -238,10 +245,3 @@ C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\obj\Debug\Tatilcim.UI.csproj.Co
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\obj\Debug\Tatilcim.UI.csproj.CopyComplete
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\obj\Debug\Tatilcim.UI.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\obj\Debug\Tatilcim.UI.pdb
-C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.Diagnostics.Tracing.EventSource.dll
-C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.Owin.Cors.dll
-C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\RabbitMQ.Client.dll
-C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\System.Web.Cors.dll
-C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.Diagnostics.Tracing.EventSource.xml
-C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Microsoft.Owin.Cors.xml
-C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\RabbitMQ.Client.xml

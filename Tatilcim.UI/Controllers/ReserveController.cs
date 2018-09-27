@@ -7,6 +7,8 @@ using System.Web.Mvc;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using ServiceStack;
+using ServiceStack.Text.Common;
 using Tatilcim.Common.Dtos;
 
 namespace Tatilcim.UI.Controllers
@@ -14,38 +16,35 @@ namespace Tatilcim.UI.Controllers
     public class ReserveController : Controller
     {
         [HttpPost]
-        public JsonResult AddReservaion(int GelenOtelId, int GelenRoomId, DateTime GirisTarihi, DateTime CikisTarihi, int KisiSayisi)
+        public ActionResult AddReservaion(ReservationDto reservation)
         {
-            ReservationDto reservation = new ReservationDto()
-            {
-                OtelId = GelenOtelId,
-                RoomId = GelenRoomId,
-                EntryDate = GirisTarihi,
-                ReleaseDate = CikisTarihi,
-                PersonCount = KisiSayisi,
-                CreatedAt = DateTime.Now,
-                UpdatedAt = DateTime.Now,
-            };
+            reservation.CreatedAt = DateTime.Now;
+            reservation.UpdatedAt = DateTime.Now;
+            reservation.Status = false;
+            var queueName = "Reservation-" + reservation.OtelId;
+
             var factory = new ConnectionFactory() { HostName = "localhost" };
             using (IConnection connection = factory.CreateConnection())
             using (IModel channel = connection.CreateModel())
             {
-                channel.QueueDeclare(queue: "Reservation",
+                channel.QueueDeclare(queue: queueName,
                     durable: false,
                     exclusive: false,
                     autoDelete: false,
                     arguments: null);
-               
-                string serializeReservation = JsonConvert.SerializeObject(reservation);
-                var content = Encoding.UTF8.GetBytes(serializeReservation);
 
+                string objem = JsonConvert.SerializeObject(reservation);
+                var body = Encoding.UTF8.GetBytes(objem);
                 channel.BasicPublish(exchange: "",
-                    routingKey: "Reservation",
+                    routingKey: queueName,
                     basicProperties: null,
-                    body: content);
+                    body: body);
+                
             }
 
-            return Json("succes", JsonRequestBehavior.AllowGet);
+
+
+            return Redirect("/Detail/Otel/"+reservation.OtelId);
         }
 
 
