@@ -134,3 +134,7 @@ C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.cspro
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.pdb
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\obj\Debug\Tatilcim.Core.Migrations.ReservationEdit.resources
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\bin\Debug\Elasticsearch.Net.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\bin\Debug\Nest.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\bin\Debug\Elasticsearch.Net.xml
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.Core\bin\Debug\Nest.xml

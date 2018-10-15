@@ -245,3 +245,7 @@ C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\obj\Debug\Tatilcim.UI.csproj.Co
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\obj\Debug\Tatilcim.UI.csproj.CopyComplete
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\obj\Debug\Tatilcim.UI.dll
 C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\obj\Debug\Tatilcim.UI.pdb
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Elasticsearch.Net.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Nest.dll
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Elasticsearch.Net.xml
+C:\Users\devpc\source\repos\Tatilcim\Tatilcim.UI\bin\Nest.xml

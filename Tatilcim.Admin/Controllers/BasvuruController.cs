@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using ServiceStack.Redis;
 using Tatilcim.Admin.Models;
 using Tatilcim.Core;
+using Tatilcim.Core.Services;
 
 namespace Tatilcim.Admin.Controllers
 {
@@ -50,6 +51,7 @@ namespace Tatilcim.Admin.Controllers
                     {
 
                         redis.Add("yeni_otel_"+Id, otel);
+                        Services.ElasticServices.CreateIndex();
 
                     }
                     return Json("success", JsonRequestBehavior.AllowGet);

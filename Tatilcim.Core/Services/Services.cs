@@ -26,5 +26,13 @@ namespace Tatilcim.Core.Services
                 return (IBaseServices<UserDto>)new UserService();
             }
         }
+
+        public static IElasticServices ElasticServices
+        {
+            get
+            {
+                return (IElasticServices)new ElasticSearchService();
+            }
+        }
     }
 }

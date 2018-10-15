@@ -11,6 +11,7 @@ namespace Tatilcim.UI.Controllers
     {
         public ActionResult Index()
         {
+            
             if (TempData["Status"] != null)
             {
                 ViewBag.Status = "succes";

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dtos\ElasticDto.cs" />
     <Compile Include="Dtos\OdaDto.cs" />
     <Compile Include="Dtos\OtelDto.cs" />
     <Compile Include="Dtos\ReservationDto.cs" />

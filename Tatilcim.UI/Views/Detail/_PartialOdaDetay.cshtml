@@ -17,7 +17,7 @@
                     <div class="score">
                         <span>@Oda.PersonCount</span>Kişilik
                     </div>
-                    <h3><strong>@Oda.Name</strong> Oda</h3>
+                    <h3><strong>@Oda.Name</strong></h3>
 
                     <ul class="add_info">
                         @{
@@ -97,7 +97,7 @@
                         <p>
                             @if (Session["Id"] != null)
                             {
-                                <button onclick="btnRezerveYap(@Oda.Id, @Oda.OtelId);" type="button" class="btn_1">Rezervanyon Yap</button>
+                                <button title="Rezervasyon Yap" onclick="btnRezerveYap(@Oda.Id, @Oda.OtelId);" type="button" class="btn_1"><i style="font-size: 30px" class="icon_set_2_icon-112"></i></button>
                                 //onclick = "btnRezerveYap(@Oda.Id, @Oda.OtelId);"
                             }
                             else
